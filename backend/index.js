@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const payload = req.body;
+  const payload = req.body.input;
   let Data = capital + small + num + symbol;
   for (let i = 1; i <= payload; i++) {
     let value = Math.floor(Math.random() * Data.length);
