@@ -5,14 +5,16 @@ const symbol = "/?!@#$%&*";
 const num = "123456789";
 const capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const small = "abcdefghijklmnooqrstuvwxyz";
+const cors = require("cors");
 
 const port = 8080;
 
 app.use(express.json());
 app.use(express.text());
+app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Checking my res");
+  res.send(reqData);
 });
 
 app.post("/", (req, res) => {

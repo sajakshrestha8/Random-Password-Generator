@@ -1,0 +1,11 @@
+.heading{
+    align-items: center;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.output{
+    border: 2px solid black;
+    width: 10rem;
+    height: 15px;
+}
