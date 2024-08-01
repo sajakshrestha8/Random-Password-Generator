@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-let reqData = "";
 const symbol = "/?!@#$%&*";
 const num = "123456789";
 const capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -18,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+  let reqData = "";
   const payload = req.body.input;
   let Data = capital + small + num + symbol;
   for (let i = 1; i <= payload; i++) {
