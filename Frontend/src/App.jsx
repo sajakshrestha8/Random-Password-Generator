@@ -6,7 +6,10 @@ import { useEffect, useState } from "react";
 export default function App() {
   const [output, setOutput] = useState("");
   const [input, setInput] = useState("");
-  const [ischecked, setIschecked] = useState(false);
+  const [ischeckedsmall, setIscheckedsmall] = useState(false);
+  const [ischeckedcapital, setIscheckedcapital] = useState(false);
+  const [ischeckednumber, setIscheckednumber] = useState(false);
+  const [ischeckedsyntax, setIscheckedsyntax] = useState(false);
 
   // async function gettingData() {
   //   const getData = await axios.get("http://localhost:8080").then((data) => {
@@ -15,10 +18,10 @@ export default function App() {
   // }
 
   const data = {
-    small: "small",
-    capital: "capital",
-    numbers: "numbers",
-    syntax: "syntax",
+    small: ischeckedsmall,
+    capital: ischeckedcapital,
+    numbers: ischeckednumber,
+    syntax: ischeckedsyntax,
   };
 
   async function sendingData() {
@@ -44,20 +47,20 @@ export default function App() {
       <label>Select your Requirements</label>
       <br />
       <Option
-        option={"Capital Letter"}
-        id="capital"
-        name="capital"
+        option={"Small Letter"}
+        id="small"
+        name="small"
         click={() => {
-          setIschecked(!ischecked);
+          setIscheckedsmall(!ischeckedsmall);
         }}
       />{" "}
       <br />
       <Option
-        option="Small Letter"
-        id="small"
-        name="small"
+        option="Capital Letter"
+        id="capital"
+        name="capital"
         click={() => {
-          setIschecked(!ischecked);
+          setIscheckedcapital(!ischeckedcapital);
         }}
       />
       <br />
@@ -66,7 +69,7 @@ export default function App() {
         id="numbers"
         name="numbers"
         click={() => {
-          setIschecked(!ischecked);
+          setIscheckednumber(!ischeckednumber);
         }}
       />
       <br />
@@ -75,7 +78,7 @@ export default function App() {
         id="syntax"
         name="syntax"
         click={() => {
-          setIschecked(!ischecked);
+          setIscheckedsyntax(!ischeckedsyntax);
         }}
       />
       <br />
