@@ -19,7 +19,7 @@ Step 3: npm i express </br>
 Step 3: npm i nodemon </br>
 Step 4: npm run start </br>
 
-//Now to you are ready to run project in your localhost: 5173 < /br>
+//Now to you are ready to run project in your localhost: 5173
 
 Demonstration image of the project
 
