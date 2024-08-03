@@ -4,21 +4,21 @@ Demonstration image of the project
 
 How to view the project?
 
-Step 1: git clone git@github.com:sajakshrestha8/Random-Password-Generator.git
-Step 2: cd Random-Password-Generator
+Step 1: git clone git@github.com:sajakshrestha8/Random-Password-Generator.git </br>
+Step 2: cd Random-Password-Generator </br>
 
-Access and run frontend
+Access and run frontend </br>
 
-Step 1: cd Frontend
-Step 2: npm install
-Step 3: npm run dev
+Step 1: cd Frontend </br>
+Step 2: npm install </br>
+Step 3: npm run dev </br>
 
 Access and run backend
 
-Step 1: cd backend
-Step 2: npm init -y
-Step 3: npm i express
-Step 3: npm i nodemon
-Step 4: npm run start
+Step 1: cd backend </br>
+Step 2: npm init -y </br>
+Step 3: npm i express </br>
+Step 3: npm i nodemon </br>
+Step 4: npm run start </br>
 
 //Now to you are ready to run project in your localhost: 5173
