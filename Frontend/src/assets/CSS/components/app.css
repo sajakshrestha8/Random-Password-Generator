@@ -1,11 +1,104 @@
 .heading{
-    align-items: center;
-    font-size: 34px;
+    text-align: center;
+    font-size: 42px;
     font-weight: 800;
+    margin-top: 2rem;
 }
 
 .output{
     border: 2px solid black;
     width: 10rem;
     height: 15px;
+}
+
+.logo{
+    height: 14rem;
+    width: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+}
+
+
+
+.moto{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 2rem;
+}
+
+.checkbox[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #C5D6E0;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 2px 4px 0px rgba(7, 29, 43, 0.12) inset;
+    /* display: grid; */
+    place-content: center;
+}
+
+.checkbox[type="checkbox"]:checked {
+    /* cursor: default; */
+    appearance: auto;
+    box-sizing: border-box;
+}
+
+.content-heading{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 550;
+}
+
+
+.check-content{
+    display: grid;
+    grid-template-columns: 0.05fr 1fr;
+}
+
+.option{
+    margin: 1rem;
+}
+
+.option-label{
+    font-size: 18px;
+}
+
+.required-length{
+    font-size: 18px;
+}
+
+.input-text{
+    padding: 6px;
+    border-radius: 8px;
+    border-color: white;
+    border: 0.5px solid #e5e5e5;    
+    box-shadow: 0px 2px 4px 0px rgba(7, 29, 43, 0.12) inset;
+    height: 20px;
+    width: 20rem;
+}
+
+.input-button-grid{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+}
+
+.button{
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px 0px rgba(7, 29, 43, 0.12) inset;
+    background-color: none;
+    border: 0.5px solid #e5e5e5; 
+    width: 4.5rem;
+}
+
+.button:active{
+    background-color: rgb(249, 249, 249);
 }

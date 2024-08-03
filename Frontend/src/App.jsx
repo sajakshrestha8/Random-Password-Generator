@@ -2,6 +2,7 @@ import Option from "./assets/Components/Options";
 import axios from "axios";
 import "./assets/CSS/index.css";
 import { useEffect, useState } from "react";
+import Logo from "./assets/Image/logo.png";
 
 export default function App() {
   const [output, setOutput] = useState("");
@@ -42,67 +43,104 @@ export default function App() {
 
   return (
     <>
-      <label className="heading">Random Password Generator</label>
-      <br />
-      <label>Select your Requirements</label>
-      <br />
-      <Option
-        option={"Small Letter"}
-        id="small"
-        name="small"
-        click={() => {
-          setIscheckedsmall(!ischeckedsmall);
-        }}
-      />{" "}
-      <br />
-      <Option
-        option="Capital Letter"
-        id="capital"
-        name="capital"
-        click={() => {
-          setIscheckedcapital(!ischeckedcapital);
-        }}
-      />
-      <br />
-      <Option
-        option="Numbers"
-        id="numbers"
-        name="numbers"
-        click={() => {
-          setIscheckednumber(!ischeckednumber);
-        }}
-      />
-      <br />
-      <Option
-        option="Syntax"
-        id="syntax"
-        name="syntax"
-        click={() => {
-          setIscheckedsyntax(!ischeckedsyntax);
-        }}
-      />
-      <br />
-      <label>Enter the number of password you want to generate</label>
-      <input
-        type="text"
-        id="input"
-        name="input"
-        value={input}
-        onChange={(e) => {
-          setInput(e.target.value);
-        }}
-      />
-      <br />
-      <button
-        onClick={() => {
-          sendingData();
-        }}
-      >
-        Generate
-      </button>
-      <br />
-      <div className="output">
-        <label>{output}</label>
+      <div className="heading">
+        <label>Random Password Generator</label>
+      </div>
+      <div className="moto">
+        <label>Create a secured password as your need</label>
+      </div>
+      <div className="content-grid">
+        <div className="logo">
+          <img src={Logo} alt="" />
+        </div>
+        <div className="content">
+          <div className="content-heading">
+            <label>Select your Requirements</label>
+          </div>
+          <br />
+          <div className="option">
+            <Option
+              option={"a b c d e"}
+              id="small"
+              name="small"
+              click={() => {
+                setIscheckedsmall(!ischeckedsmall);
+              }}
+            />
+          </div>
+          <div className="option">
+            <Option
+              option="A B C D E"
+              id="capital"
+              name="capital"
+              click={() => {
+                setIscheckedcapital(!ischeckedcapital);
+              }}
+            />
+          </div>
+          <div className="option">
+            <Option
+              option="1 2 3 4 5"
+              id="numbers"
+              name="numbers"
+              click={() => {
+                setIscheckednumber(!ischeckednumber);
+              }}
+            />
+          </div>
+          <div className="option">
+            <Option
+              option="# % * @ $"
+              id="syntax"
+              name="syntax"
+              click={() => {
+                setIscheckedsyntax(!ischeckedsyntax);
+              }}
+            />
+          </div>
+          {/* <div className="required-length">
+            <label>Enter the number of password you want to generate</label>
+          </div> */}
+          <div className="input-button-grid">
+            <div className="input-field">
+              <input
+                type="text"
+                id="input"
+                name="input"
+                value={input}
+                onChange={(e) => {
+                  setInput(e.target.value);
+                }}
+                placeholder="Enter the length of password"
+                className="input-text"
+              />
+            </div>
+            <div>
+              <button
+                onClick={() => {
+                  sendingData();
+                }}
+                className="button"
+              >
+                Generate
+              </button>
+            </div>
+          </div>
+          <br />
+          <div className="input-button-grid">
+            <div className="input-text">
+              <label>{output}</label>
+            </div>
+            <div>
+              <button
+                onClick={() => navigator.clipboard.writeText(output)}
+                className="button"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
